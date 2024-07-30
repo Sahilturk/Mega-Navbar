@@ -1,0 +1,258 @@
+*{margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    list-style: none;
+
+}
+html{
+    font-size: 62.5%;
+}
+nav{
+    background-color: rgb(85, 49, 153);
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 7rem;
+    line-height: 7rem;
+
+}
+.nav-links{
+    display: inline-flex;
+}
+.wrapper{
+    position: relative;
+    max-width: 125rem;
+    padding: 0 3rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+li a{
+    text-decoration: none;
+    color: azure;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    border-radius: 0.6rem;
+    transition: all 0.3s ease;
+}
+li a:hover{
+    background: rgb(83, 80, 80);
+
+}
+.logo{
+    font-size: 2.5rem;
+    color: azure;
+    font-weight: 800;
+}
+.drop-menu{
+    background: rgb(85, 49, 153);
+    width: 14rem;
+    top: 8.5rem;
+    line-height: 4.5rem;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+.nav-links li:hover .drop-menu,
+.nav-links li:hover .mega-box{
+    top: 6.5rem;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+}
+.drop-menu li a{
+    width: 100%;
+    display: block;
+    padding: 0 0 0 1.5rem ;
+    font-weight: 500;
+}
+.mega-box{
+    padding: 0 3rem;
+    position: absolute;
+    top: 8.5rem;
+    width: 100%;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+.mega-box .content{
+    background: rgb(85, 49, 153);
+    padding: 2.5rem 2rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+.content .row{
+    width: calc(25% - 3rem);
+    line-height: 4.5rem;
+
+}
+.content .row img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+header{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #beb7b7;
+}
+.mega-links{
+    border-left: 0.1rem solid rgba(255, 255, 255, 0.09);
+    margin-left: -4rem;
+}
+.mega-links li {
+    padding: 0 2rem;
+}
+.mega-links li a{
+    padding: 0 2rem;
+    font-size: 1.6rem;
+    display: block;
+
+}
+.mobile{display: none;}
+#showmega{
+    display: none;
+}
+#showdrop{
+    display: none;
+}
+.wrapper .btn{
+    color: azure;
+    cursor: pointer;
+    display: none;
+}
+.cancel{
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+}
+#menu-btn,#cancel-btn{
+    display: none;
+}
+@media screen and (max-width: 970px) {
+    html{
+        font-size: 55%;
+    }
+    .wrapper .btn{
+       
+        display: block;
+    }
+    .wrapper .nav-links{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        max-width: 35rem;
+        background-color:rgb(85, 49, 153) ;
+        display: block;
+        top: 0;
+        left: -100%;
+        overflow-y: auto;
+        line-height: 5rem;
+        padding: 5rem 1rem;
+        box-shadow: 0 1.5rem 1.5rem rgba(0, 0, 0, 0.15);
+        transition: all 0.5s ease;
+    }
+    .nav-links::-webkit-scrollbar{
+        width: 0rem;
+    }
+    #menu-btn:checked ~ .nav-links{
+        left: 0;
+    }
+    #menu-btn:checked ~ .hide{
+        display: none;
+    }
+    #cancel-btn:checked ~ .nav-links{
+        left: -100%;
+    }
+    .nav-links li {
+        margin: 1.5rem 1rem;
+    }
+    .nav-links li a{
+        padding: 0 2rem;
+        display: block;
+        font-size: 2rem;
+    }
+    .nav-links .drop-menu{
+        position: static;
+        visibility: visible;
+        opacity: 1;
+        padding-left: 2rem;
+        width: 100%;
+        top: 6.5rem;
+        overflow: hidden;
+        max-height: 0rem;
+        transition: all 0.5s ease;
+    }
+    #showdrop{
+        display: none;
+    }
+    #showdrop:checked ~ .drop-menu{
+        /* opacity: 0; */
+        max-height: 100%;
+    } 
+    .nav-links .drop-menu li{
+        margin: 0;
+    }
+    .nav-links .drop-menu li a{
+        font-size: 1.8rem;
+    }
+    #desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+        font-size: 2rem;
+        padding-left: 2rem;
+        color: azure;
+        font-weight: 600;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+    }
+    .mobile:hover{
+        background: rgb(83, 80, 80);
+    }
+    .mega-box{
+        padding: 0 3rem;
+        position: static;
+        top: 6.5rem;
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+        max-height: 0rem;
+        overflow: hidden;
+        transition: all 1s ease;
+    }
+    .mega-box .content{
+        background: rgb(85, 49, 153);
+      flex-direction: column;
+      padding: 2rem 2rem 0 2rem;
+        
+    }
+    .mega-box .content .row{
+        width: 100%;
+        margin-bottom: 1.5rem;
+        border-top: 0.1rem solid rgba(255, 255, 255, 0.08);
+    }
+    .mega-links{
+        border-left:0;
+       padding-left:1.5rem ;
+    }
+    .mega-links li {
+        margin: 0;
+    }
+    header{
+        font-size: 2rem;
+    }
+    #showmega{
+        display: none;
+    }
+    #showmega:checked ~ .mega-box{
+        max-height: 100%;
+    }
+}

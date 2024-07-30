@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="wrapper">
+        <div class="logo">SAHIL</div>
+        <input type="radio" name="slide" id="menu-btn">
+        <input type="radio" name="slide" id="cancel-btn">
+        <ul class="nav-links">
+            <label for="cancel-btn"> <i class="btn cancel fa fa-times w3-xlarge"></i></label>
+          <li class="links"><a href="">Home</a></li>
+          <li class="links"><a href="">About</a></li>
+          <li class="links">
+            <a href="" id="desktop">Dropdown</a>
+            <input type="checkbox" id="showdrop">
+            <label for="showdrop" class="mobile">Dropdown</label>
+            <ul class="drop-menu">
+              <li><a href="">Drop menu 1</a></li>
+              <li><a href="">Drop menu 2</a></li>
+              <li><a href="">Drop menu 3</a></li>
+              <li><a href="">Drop menu 4</a></li>
+            </ul>
+          </li>
+
+          <li class="links">
+            <a href="" id="desktop">Mega Menu</a>
+            <input type="checkbox"  id="showmega">
+            <label for="showmega" class="mobile">Mega Menu</label>
+            <div class="mega-box">
+              <div class="content">
+                <div class="row">
+                    <img src="picture.jpg" alt="">
+                </div>
+                <div class="row">
+                  <header>Email Services</header>
+                  <ul class="mega-links">
+                    <li><a href="">Graphics</a></li>
+                    <li><a href="">Vector</a></li>
+                    <li><a href="">Bussiness Card</a></li>
+                    <li><a href="">Custom Logo</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>Design Services</header>
+                  <ul class="mega-links">
+                    <li><a href="">Graphics</a></li>
+                    <li><a href="">Vector</a></li>
+                    <li><a href="">Bussiness Card</a></li>
+                    <li><a href="">Custom Logo</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>Security Services</header>
+                  <ul class="mega-links">
+                    <li><a href="">Graphics</a></li>
+                    <li><a href="">Vector</a></li>
+                    <li><a href="">Bussiness Card</a></li>
+                    <li><a href="">Custom Logo</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="links"><a href="">Feedback</a></li>
+        </ul>
+
+        <label for="menu-btn" class="hide"> <i class="btn fa fa-bars w3-xlarge"></i></label>
+
+      </div>
+    </nav>
+  </body>
+</html>
